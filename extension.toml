@@ -5,7 +5,6 @@ schema_version = 1
 authors = ["Scenic tree-sitter contributors"]
 description = "Scenic language support with Tree-sitter syntax highlighting."
 repository = "https://github.com/Maciej4/scenic-zed"
-snippets = ["./snippets/scenic.json"]
 
 [grammars.scenic]
 repository = "https://github.com/Maciej4/tree-sitter-scenic"
