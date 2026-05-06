@@ -1,0 +1,170 @@
+{
+  "Model statement": {
+    "prefix": "model",
+    "body": [
+      "model ${1:scenic.simulators.carla.model}"
+    ],
+    "description": "Declare the Scenic world model"
+  },
+  "Parameter statement": {
+    "prefix": "param",
+    "body": [
+      "param ${1:name} = ${2:value}$0"
+    ],
+    "description": "Declare a Scenic parameter"
+  },
+  "Requirement": {
+    "prefix": "require",
+    "body": [
+      "require ${1:condition}$0"
+    ],
+    "description": "Declare a Scenic requirement"
+  },
+  "Requirement always": {
+    "prefix": "reqalways",
+    "body": [
+      "require always ${1:condition}$0"
+    ],
+    "description": "Declare an invariant dynamic requirement"
+  },
+  "Requirement eventually": {
+    "prefix": "reqeventually",
+    "body": [
+      "require eventually ${1:condition}$0"
+    ],
+    "description": "Declare an eventual dynamic requirement"
+  },
+  "Terminate when": {
+    "prefix": "terminate",
+    "body": [
+      "terminate when ${1:condition}$0"
+    ],
+    "description": "Terminate the scenario when a condition holds"
+  },
+  "Record value": {
+    "prefix": "record",
+    "body": [
+      "record ${1:value} as ${2:name}$0"
+    ],
+    "description": "Record a value from a simulation"
+  },
+  "New object": {
+    "prefix": "new",
+    "body": [
+      "${1:name} = new ${2:Object} at ${3:position}$0"
+    ],
+    "description": "Create a Scenic object"
+  },
+  "New object with specifiers": {
+    "prefix": "newat",
+    "body": [
+      "${1:name} = new ${2:Object} at ${3:position},",
+      "    facing ${4:heading},",
+      "    with ${5:property} ${6:value}$0"
+    ],
+    "description": "Create an object with common specifiers"
+  },
+  "Ego object": {
+    "prefix": "ego",
+    "body": [
+      "ego = new ${1:Object} at ${2:position},",
+      "    facing ${3:heading},",
+      "    with behavior ${4:EgoBehavior}(${5})$0"
+    ],
+    "description": "Create the ego object"
+  },
+  "With specifier": {
+    "prefix": "with",
+    "body": [
+      "with ${1:property} ${2:value}$0"
+    ],
+    "description": "Add a Scenic property specifier"
+  },
+  "With behavior specifier": {
+    "prefix": "withbehavior",
+    "body": [
+      "with behavior ${1:Behavior}(${2})$0"
+    ],
+    "description": "Add a behavior specifier"
+  },
+  "Behavior definition": {
+    "prefix": "behavior",
+    "body": [
+      "behavior ${1:BehaviorName}(${2}):",
+      "    do ${3:Behavior}(${4})",
+      "    $0"
+    ],
+    "description": "Define a Scenic behavior"
+  },
+  "Scenario definition": {
+    "prefix": "scenario",
+    "body": [
+      "scenario ${1:ScenarioName}(${2}):",
+      "    ego = new ${3:Object}",
+      "    $0"
+    ],
+    "description": "Define a Scenic dynamic scenario"
+  },
+  "Monitor definition": {
+    "prefix": "monitor",
+    "body": [
+      "monitor ${1:MonitorName}(${2}):",
+      "    require ${3:condition}",
+      "    $0"
+    ],
+    "description": "Define a Scenic monitor"
+  },
+  "Try interrupt": {
+    "prefix": "interrupt",
+    "body": [
+      "try:",
+      "    do ${1:Behavior}(${2})",
+      "interrupt when ${3:condition}:",
+      "    take ${4:Action}(${5})",
+      "    $0"
+    ],
+    "description": "Add a try/interrupt behavior block"
+  },
+  "Do behavior": {
+    "prefix": "do",
+    "body": [
+      "do ${1:Behavior}(${2})$0"
+    ],
+    "description": "Run a behavior or scenario"
+  },
+  "Do until": {
+    "prefix": "dountil",
+    "body": [
+      "do ${1:Behavior}(${2}) until ${3:condition}$0"
+    ],
+    "description": "Run a behavior or scenario until a condition holds"
+  },
+  "Do for seconds": {
+    "prefix": "dofor",
+    "body": [
+      "do ${1:Behavior}(${2}) for ${3:duration} seconds$0"
+    ],
+    "description": "Run a behavior or scenario for a duration"
+  },
+  "Take action": {
+    "prefix": "take",
+    "body": [
+      "take ${1:Action}(${2})$0"
+    ],
+    "description": "Take one or more actions"
+  },
+  "Mutate objects": {
+    "prefix": "mutate",
+    "body": [
+      "mutate ${1:object}$0"
+    ],
+    "description": "Mutate one or more objects"
+  },
+  "Override specifier": {
+    "prefix": "override",
+    "body": [
+      "override ${1:object} with ${2:property} ${3:value}$0"
+    ],
+    "description": "Override specifiers on an existing object"
+  }
+}
