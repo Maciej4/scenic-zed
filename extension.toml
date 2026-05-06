@@ -8,4 +8,4 @@ repository = "https://github.com/Maciej4/scenic-zed"
 
 [grammars.scenic]
 repository = "https://github.com/Maciej4/tree-sitter-scenic"
-rev = "2ac2e530a5a8836184425987d247311af27a2d05"
+rev = "295233d104b1fdaedc9f660e37e2b485f43b466e"
