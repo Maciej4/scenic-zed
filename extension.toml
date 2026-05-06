@@ -1,0 +1,11 @@
+id = "scenic"
+name = "Scenic"
+version = "0.1.0"
+schema_version = 1
+authors = ["Scenic tree-sitter contributors"]
+description = "Scenic language support with Tree-sitter syntax highlighting."
+repository = "https://github.com/Maciej4/scenic-zed"
+
+[grammars.scenic]
+repository = "https://github.com/Maciej4/tree-sitter-scenic"
+rev = "2ac2e530a5a8836184425987d247311af27a2d05"
